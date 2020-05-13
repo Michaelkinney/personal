@@ -16,7 +16,7 @@ git config --global user.email "'email'"    >> same
 ls                                >> shows files in repo
 ls -l                             >> simple list
 ls -a                             >> ??
-ls -al                            >> >>
+ls -al                            >> ??
 
 git mv 'filename' 'newfilename'   >> change file names
 git rm 'filename'                 >> removes a file
