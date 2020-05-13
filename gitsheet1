@@ -1,0 +1,76 @@
+                                                     Git bash cheat sheet
+
+
+git init 'foldername'             >> initializes folder for git repo
+git status                        >> checks my local branch
+pwd                               >> for current folder info
+cd /'foldername'                  >> change to folder
+touch 'filename'                  >> creates new file
+npp 'filename'                    >> open that file in npp
+notepad++ 'filename'              >> open that file in npp    both of these have to be integrated via control panel, system,
+                                     system, advanced settings, environment varialbes, down to path, add pathway to your npp
+
+git config --global user.name "'name name'" >> upon initializing a new folder
+git config --global user.email "'email'"    >> same
+
+ls                                >> shows files in repo
+ls -l                             >> simple list
+ls -a                             >> ??
+ls -al                            >> >>
+
+git mv 'filename' 'newfilename'   >> change file names
+git rm 'filename'                 >> removes a file
+
+git add 'filename' or '.'         >> adds files to staging area
+git add -u                        >> just stages deletions if both additions and deletions present
+git add -A                        >> stages deletions and additions
+
+git commit 'filename' or '.'      >> commits files 
+git commit -m "'add  message'"    >> commits with message 
+git commit -am 'filename'         >> ??
+
+git remote -v                     >> shows online repositorys
+git remote add origin 'urlofrepository'   >> links it up with github , this url is special to this specific local git repository
+git push -u origin master --tags  >>  pushes info online
+                                      pushes in the future will not require -u now , if staying within this ...
+
+git push origin 'branchname'      >> to push online , if i have no branch names then its (master) as default 
+
+git checkout 'branchname' ,       >> switch to master before you add a branch to main
+git branch                        >> shows branch
+git branch -b 'name'              >> creates a branch
+git branch -a                     >> shows lists of branches
+git checkout -b 'name'            >> moves files that have been modified to a new branch
+                                     automatically that have been modified but not commited yet
+git merge 'branch name'           >> to merge to master
+git branch -d 'name'              >> to delete branch after merged, no need for it anymore
+
+git hist                          >> info on logs
+git hist -- 'file name'           >> info on specific file
+
+npp .gitignore                    >> *.log will ingore all log files, and so on
+                                     or jsut type full file name then commit this change
+
+git diff 'filename 'filename'     >> shows diffs
+git difftool 'filename 'filename' >> opens up in p4merge
+git diff 'updates' 'master'       >>  you can compare diffs with branch names now
+
+git tag 'name'                    >> creates arbitary tag
+git tag --list                    >> lists tags
+git tag -d 'name'                 >> to delete tag
+git tag -a v1.0 -m "Release 1.0"  >> is a better looking tag with message
+
+git show v1.0                     >> shows info
+git reflog                        >> shows everything including resets
+
+git reset 'unique#id' --soft      >>  only moves to head
+                        --hard    >>  most destructive
+                        --mixed   >>  removes more changes and put you on head
+
+                                      NOTES
+git add 'files'    - staged
+git commit 'files' - commited
+git push 'files'   - push it to repo     do i ened to type git push origin?
+                     if its cloned it goes in, or set up destination   
+					 
+					 cntrl s  >> save
